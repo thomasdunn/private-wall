@@ -1,3 +1,31 @@
+Application notes:
+
+Create Groovy / Grails app that:
+ 
+ You send an email to the app, emails including text and images
+ Email is stored as a post with date
+ Application is basically a shared family wall of posts
+ All your family members are members of the wall
+ They are nagged monthly to share something
+ They are sent monthly digests in email with links to the wall
+  
+  This handles the use cases:
+  * you may not want to post to your facebook wall because you don't want everyone to see it and you are not familiar with facebook permission settings
+  * you do not have a facebook account
+  * you want to share only with your family
+  * want a private hosted solution
+
+Implementation:
+
+-Initially, use Gmail account for sending posts to.  Use JavaMail to access Gmail account (remember to enable IMAP in Account Settings)
+-Later, can use something like RabbitMQ with the SMTP plugin to respond to emails and put them in DB.  That will require some more advanced SMTP configuration so avoiding it for now.
+
+Hosting idea: Get Amazon AWS free account with EC2 (free for 1 year, micro compute instance).  Use AppFog free account for Grails hosting.
+
+Job for writing to DB use AppFog standalone app.
+Job for sending digests and reminders, also AppFog standalone app.
+Grails app for displaying posts in a wall-like manner.
+
 Project setup:
 
 - Java 7 setup (JAVA_HOME, PATH)
@@ -19,7 +47,4 @@ also:
 http://code.google.com/p/java-gmail-imap/
 http://code.google.com/p/java-gmail-imap/wiki/TestingJavaMailGIMAP
 
-Gmail account:
-dunnfamily568@gmail.com
-sonnyjackey
-Enable IMAP in Account Settings
+
