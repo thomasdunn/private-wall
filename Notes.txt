@@ -1,0 +1,25 @@
+Project setup:
+
+- Java 7 setup (JAVA_HOME, PATH)
+- Git setup (GitBash only, default line endings, openssh)
+- GitHub account (follow keygen steps, passphrase lynx)
+- Groovy setup (GROOVY_HOME, PATH)
+- Grails setup (GRAILS_HOME, PATH)
+- IntelliJ 12 setup (plugins: Git, Database, SQL, Velocity, HTML, JavaScript, CSS, GitHub, Gradle, Grails, Groovy, Intention Power Pack, JarFinder, JUnit, Maven, UI Designer, UML)
+
+
+JavaMail:
+
+http://kenai.com/projects/javamail/lists/users/archive/2012-08/message/0
+https://maven.java.net/content/repositories/snapshots/com/sun/mail/javax.mail/1.4.6-SNAPSHOT/
+https://maven.java.net/content/repositories/snapshots/com/sun/mail/gimap/1.4.6-SNAPSHOT/
+http://javamail.kenai.com/nonav/javadocs/
+https://delicious.com/thomas.dunn/javamail
+also:
+http://code.google.com/p/java-gmail-imap/
+http://code.google.com/p/java-gmail-imap/wiki/TestingJavaMailGIMAP
+
+Gmail account:
+dunnfamily568@gmail.com
+sonnyjackey
+Enable IMAP in Account Settings
