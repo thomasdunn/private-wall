@@ -20,8 +20,8 @@ props.setProperty("mail.store.protocol", "gimaps")
 GmailSSLStore store = null
 GmailFolder folder = null
 
-String username = "<username>@gmail.com"
-String password = "<password>"
+String username = "dunnfamily568@gmail.com"
+String password = "921middle"
 
 try {
     Session session = Session.getDefaultInstance(props, null)
