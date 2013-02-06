@@ -6,10 +6,10 @@ class User {
     String password
     Date dateCreated
 
-    static hasMany = [ posts : Post ]
+    static hasMany = [ contents : Content /* , posts : Post */ ]
 
     static constraints = {
-        userId size: 3..20, unique: true
+        userId size: 3..50, unique: true
         password size: 6..20
     }
 }

@@ -6,7 +6,7 @@ class Content {
     String fileName
     Date dateCreated
 
-    static belongsTo = [ post : Post ]
+    static belongsTo = [ user : User /* , post : Post */ ]
 
     static constraints = {
         fileContent blank: false
