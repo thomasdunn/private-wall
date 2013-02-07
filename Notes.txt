@@ -47,4 +47,8 @@ also:
 http://code.google.com/p/java-gmail-imap/
 http://code.google.com/p/java-gmail-imap/wiki/TestingJavaMailGIMAP
 
+Running test script:
+C:\git\private-wall>grails run-script scripts\TestCreateUser.groovy
 
+Running integration tests:
+C:\git\private-wall>grails test-app integration:

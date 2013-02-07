@@ -9,7 +9,13 @@ class Content {
     static belongsTo = [ user : User /* , post : Post */ ]
 
     static constraints = {
-        fileContent blank: false
+        fileContent blank: false, minSize:1, maxSize: Integer.MAX_VALUE
         fileName blank: false
+    }
+
+    static mapping = {
+        columns {
+            fileContent sqlType: 'blob'
+        }
     }
 }

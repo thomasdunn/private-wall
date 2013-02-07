@@ -12,4 +12,8 @@ class User {
         userId size: 3..50, unique: true
         password size: 6..20
     }
+
+    String toString() {
+        "User ${userId} (${id})"
+    }
 }
