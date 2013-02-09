@@ -5,6 +5,8 @@ import grails.plugin.spock.*
 
 class ContentIntegrationSpec extends IntegrationSpec  {
 
+    def contentService
+
 //    def "Saving a user -> post -> content to the database"() {
 //
 //        given: "A new user, post, and content"
@@ -63,6 +65,30 @@ class ContentIntegrationSpec extends IntegrationSpec  {
         content.fileContent.length == 3
         Content.get(content.id).fileName == content.fileName
         Content.get(content.id).fileContent == content.fileContent
+    }
+
+    def "getAllContentMetadata returns data"() {
+
+        given: "Create a user and content"
+
+        def initialCount = Content.getCount()
+
+        def user = new User(userId: "wwonka", password: "gobstopper")
+        def content = new Content(fileName: "youlose.jpg", fileContent: [ 0, 1, 2 ] as byte[])
+
+        user.addToContents(content)
+        user.save()
+
+        when: "get content metadata"
+
+        def contents = contentService.getAllContentMetadata()
+
+        then: "Check for proper content metadata"
+
+        contents.size() == initialCount + 1
+        contents[0].id == content.id
+        contents[0].fileName == "youlose.jpg"
+
     }
 
 }
