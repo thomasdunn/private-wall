@@ -50,6 +50,10 @@ http://code.google.com/p/java-gmail-imap/wiki/TestingJavaMailGIMAP
 Running test script:
 C:\git\private-wall>grails run-script scripts\TestCreateUser.groovy
 
+set GRAILS_OPTS=-Demail=emailaddr@gmail.com -Dpassword=myp@ssword
+C:\git\private-wall>grails run-script scripts\TestJavaMail.groovy
+C:\git\private-wall>grails run-script scripts\TestWriteImage.groovy
+
 Running integration tests:
 C:\git\private-wall>grails test-app integration:
 

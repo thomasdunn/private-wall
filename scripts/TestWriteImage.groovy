@@ -85,7 +85,7 @@ def writeAttachments(Message message) {
         imageContent.fileName = message.subject
         imageContent.fileContent = is.getBytes()
 
-        fromUser.addToContents()
+        fromUser.addToContents(imageContent)
         fromUser.save()
 
         names << bodyPart.getFileName()
